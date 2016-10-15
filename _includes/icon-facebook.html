@@ -1,0 +1,2 @@
+{% assign url = 'https://facebook.com/' | append: {{ include.username }} %}
+{% include social-icon.html username=include.username url=url label=include.label service='facebook' %}

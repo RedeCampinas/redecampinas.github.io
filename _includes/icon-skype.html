@@ -1,0 +1,2 @@
+{% assign url = 'skype:' | append: {{ include.username }} | append: '?userinfo'%}
+{% include social-icon.html username=include.username url=url label=include.label service='skype' %}

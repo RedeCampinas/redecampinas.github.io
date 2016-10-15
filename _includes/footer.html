@@ -1,0 +1,70 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            {% if site.author %}
+              {{ site.author | escape }}
+            {% else %}
+              {{ site.title | escape }}
+            {% endif %}
+            </li>
+          {% if site.email %}
+          <li><i class="icon-social-envelope icons"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% endif %}
+          {% if site.phone_number %}
+          <li><i class="icon-social-phone icons"></i><a href="tel:{{ site.phone_number }}">{{ site.phone_number }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.facebook_username %}
+          <li>
+            {% include icon-facebook.html username=site.facebook_username label=true %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username label=true %}
+          </li>
+          {% endif %}
+
+          {% if site.instagram_username %}
+          <li>
+            {% include icon-instagram.html username=site.instagram_username label=true %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description | escape }}</p>
+        <a data-toggle="modal" data-target="#license"><img alt="Creative Commons License" style="border-width:0;text-align:center;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<div class="modal fade" id="license" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">License</h4>
+      </div>
+      <div class="modal-body">
+        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ site.title }}</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="{{ basesite }}" property="cc:attributionName" rel="cc:attributionURL">{{ site.author }}</a> is licensed under a <a rel="license" href="{{ site.license_url }}">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ site.source }}" rel="dct:source">{{ site.source | split: ':' | last | split: '/' | slice: 2 }}</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="{{ site.license_more_url }}" rel="cc:morePermissions">{{ site.license_more_url | split: '/' | last}}</a>.
+      </div>
+    </div>
+  </div>
+</div>

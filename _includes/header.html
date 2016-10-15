@@ -1,0 +1,18 @@
+<nav class="navbar navbar-static-top navbar-dark bg-inverse">
+  <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+  <ul class="nav navbar-nav">
+    {% for my_page in site.pages %}
+      {% if my_page.title %}
+        {% if page.url == my_page.url %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title | escape }}</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title | escape }}</a>
+        </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

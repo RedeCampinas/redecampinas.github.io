@@ -1,0 +1,63 @@
+# Site
+title: Rede Sustentabilidade Campinas
+description: > # this means to ignore newlines until "baseurl:"
+  Elo Campinas da Rede Sustentabilidade
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://redecampinas18.github.io" # the base hostname & protocol for your site
+license_url: "http://creativecommons.org/licenses/by/4.0/"
+license_more_url: "https://raw.githubusercontent.com/RedeCampinas18/redecampinas18.github.io/master/LICENSE"
+
+#  Analytics
+google_analytics: UA-85753127-1
+
+#  Author
+author: Elo Campinas
+organization: Rede Sustentabilidade Campinas
+organization_url: http://redecampinas.github.io
+location: Campinas, Brazil
+email: redecampinasoficial@gmail.com
+phone_number: 
+
+#  Social
+instagram_username: RedeCampinas18
+twitter_username: RedeCampinas18
+github_username:  RedeCampinas18
+google_username:  112605171219016719047
+facebook_username:  RedeCampinas18
+linkedin_username:
+
+# Build settings
+markdown: kramdown
+theme: minima
+highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - .gitignore
+
+github: [metadata]
+repository: redecampinas18/redecampinas18.github.io
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jemoji
+
+# GitHub Pages Default
+lsi: false
+safe: true
+#source: https://github.com/tiagofalcao/tiagofalcao.github.io
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
